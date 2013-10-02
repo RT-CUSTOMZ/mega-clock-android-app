@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MegaClock" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/green"
+        android:layout_alignParentTop="true"
+        android:text="Green"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:max="4095" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/blue"
+        android:layout_alignLeft="@+id/blue"
+        android:layout_marginBottom="33dp"
+        android:text="Blue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/green"
+        android:layout_below="@+id/green"
+        android:layout_marginTop="40dp"
+        android:max="4095" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/red"
+        android:layout_alignLeft="@+id/red"
+        android:layout_marginBottom="36dp"
+        android:text="Red"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/blue"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="43dp"
+        android:max="4095" />
+
+    <EditText
+        android:id="@+id/server_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/red"
+        android:layout_alignParentBottom="true"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="192.168.120.251" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/server_ip"
+        android:layout_alignLeft="@+id/server_ip"
+        android:layout_marginBottom="14dp"
+        android:text="Clock IP"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/server_ip"
+        android:text="Points?"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ToggleButton
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:text="ToggleButton" />
+
+    <Button
+        android:id="@+id/local_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignRight="@+id/points"
+        android:text="Show Local Temperature" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/red"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="18dp"
+        android:text="Brightness"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/brightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/red"
+        android:layout_below="@+id/textView6"
+        android:max="100" />
+
+</RelativeLayout>
